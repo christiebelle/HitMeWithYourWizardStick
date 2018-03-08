@@ -11,8 +11,17 @@ public class Game {
     ArrayList<Room> rooms;
 
     public Game() {
+        this.rooms = new ArrayList<>();
+        this.players = new ArrayList<>();
     }
 
 
+    public void addRoomToGame(Room room) {
+        this.rooms.add(room);
+    }
+
+    public int noOfRooms() {
+        return this.rooms.size();
+    }
 }
 
