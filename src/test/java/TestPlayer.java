@@ -1,26 +1,36 @@
-import Characters.Ogre;
-import Characters.Orc;
-import Characters.Troll;
+import Characters.*;
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 public class TestPlayer {
+
+    Knight knight;
+    Barbarian barbarian;
+    Cleric cleric;
+    Dwarf dwarf;
+    Warlock warlock;
+    Wizard wizard;
+
+
     @Before
     public void setUp() throws Exception {
-        orc = new Orc("Orc", 100);
-        ogre = new Ogre("Ogre", 100);
-        troll = new Troll("Troll", 100);
+        knight = new Knight("Brave Sir Robin", "Knight", 100);
+    }
+
+    @Test
+    public void testHasName() {
+        assertEquals("Brave Sir Robin", knight.getName());
     }
 
     @Test
     public void testHasType() {
-        assertEquals("Orc", orc.getType());
+        assertEquals("Knight", knight.getType());
     }
 
     @Test
     public void testHasHealth() {
-        assertEquals(100, orc.getHealth());
+        assertEquals(100, knight.getHealth());
     }
 }
