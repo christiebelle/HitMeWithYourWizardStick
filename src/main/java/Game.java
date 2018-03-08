@@ -23,5 +23,13 @@ public class Game {
     public int noOfRooms() {
         return this.rooms.size();
     }
+
+    public void addPlayerToGame(Player player) {
+        this.players.add(player);
+    }
+
+    public int noOfPlayers() {
+        return this.players.size();
+    }
 }
 

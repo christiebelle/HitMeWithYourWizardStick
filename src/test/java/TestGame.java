@@ -43,5 +43,11 @@ public class TestGame {
         game.addRoomToGame(room);
         assertEquals(1, game.noOfRooms());
     }
+
+    @Test
+    public void testAddAPlayer() {
+        game.addPlayerToGame(player);
+        assertEquals(1, game.noOfPlayers());
+    }
 }
 
