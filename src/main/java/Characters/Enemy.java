@@ -1,8 +1,9 @@
 package Characters;
 
 import Enums.Weapons;
+import Interfaces.iAttack;
 
-public abstract class Enemy {
+public abstract class Enemy implements iAttack {
 
     private String type;
     private int health;

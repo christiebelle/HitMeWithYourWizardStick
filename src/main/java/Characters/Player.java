@@ -1,6 +1,7 @@
 package Characters;
 
 import Enums.Weapons;
+import Interfaces.iAttack;
 
 public abstract class Player {
 
