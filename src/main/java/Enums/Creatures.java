@@ -1,3 +1,5 @@
+package Enums;
+
 public enum Creatures {
     UNICORN(10, "charges"),
     DRAGON(15, "incinerates"),

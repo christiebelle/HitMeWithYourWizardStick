@@ -1,3 +1,5 @@
+package Treasures;
+
 public abstract class Treasure {
 
     private String type;

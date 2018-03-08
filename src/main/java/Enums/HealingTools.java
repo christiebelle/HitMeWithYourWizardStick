@@ -1,3 +1,5 @@
+package Enums;
+
 public enum HealingTools {
     POTION(10, "revives"),
     HERBS(5, "does fuck all, but placebo affects"),

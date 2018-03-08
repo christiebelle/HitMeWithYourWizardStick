@@ -1,3 +1,5 @@
+package Enums;
+
 public enum Spells {
     FIREBALL(15, "explodes"),
     LIGHTNINGSTRIKE(12, "electrifies"),
