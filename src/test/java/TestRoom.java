@@ -1,5 +1,6 @@
 import Characters.Enemy;
 import Characters.Orc;
+import Enums.Weapons;
 import Rooms.Room;
 import Rooms.RoomNames;
 import Treasures.Treasure;
@@ -17,6 +18,7 @@ public class TestRoom {
     @Before
     public void setUp() throws Exception {
         orc = new Orc("Orc", 100);
+        orc.setWeapon(Weapons.AXE);
         gold = new Gold("Gold");
         room = new Room(RoomNames.ROOMOFBRIDGES.getRoomName(), RoomNames.ROOMOFBRIDGES.getRoomNumber(), orc, gold);
     }
@@ -39,5 +41,10 @@ public class TestRoom {
     @Test
     public void testRoomHasTreasure() {
         assert(room.getTreasure() instanceof Treasure);
+    }
+
+    @Test
+    public void testDescribeRoom() {
+        assertEquals("You enter the Room of Bridges. Suddenly, a belligerent and bloodthirsty Orc appears, wielding a deadly axe, and guarding a huge chest of Gold", room.describeRoom());
     }
 }

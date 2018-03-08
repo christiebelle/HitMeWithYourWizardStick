@@ -7,14 +7,19 @@ import java.util.ArrayList;
 
 public class Game {
 
+    String name;
     ArrayList<Player> players;
     ArrayList<Room> rooms;
 
-    public Game() {
+    public Game(String name) {
+        this.name = name;
         this.rooms = new ArrayList<>();
         this.players = new ArrayList<>();
     }
 
+    public String getName() {
+        return name;
+    }
 
     public void addRoomToGame(Room room) {
         this.rooms.add(room);

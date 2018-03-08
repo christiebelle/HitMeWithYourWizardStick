@@ -35,7 +35,12 @@ public class TestGame {
         player.setWeapon(Weapons.SWORD);
         player.setLevel(1);
 
-        game = new Game();
+        game = new Game("Hit Me With Your Wizard Stick!");
+    }
+
+    @Test
+    public void testGameName() {
+        assertEquals("Hit Me With Your Wizard Stick!", game.getName());
     }
 
     @Test
@@ -49,5 +54,6 @@ public class TestGame {
         game.addPlayerToGame(player);
         assertEquals(1, game.noOfPlayers());
     }
+
 }
 

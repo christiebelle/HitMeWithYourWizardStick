@@ -32,4 +32,8 @@ public class Room {
     public Treasure getTreasure() {
         return treasure;
     }
+
+    public String describeRoom(){
+        return "You enter the " + this.roomname + ". Suddenly, a belligerent and bloodthirsty " + this.enemy.getType() + " appears, wielding a deadly " + enemy.getWeapon().toString().toLowerCase() + ", and guarding a huge chest of " + this.treasure.getType();
+    }
 }
