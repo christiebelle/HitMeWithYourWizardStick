@@ -19,8 +19,8 @@ public class TestBarbarian {
 
     @Test
     public void testAttack() {
-        barbarian.setLevel(1);
+        barbarian.setLevel(2);
         barbarian.setWeapon(Weapons.SWORD);
-        assertEquals("Hannibal slashes the Ogre with their sword inflicting a damage of 10", barbarian.attack(barbarian, ogre));
+        assertEquals("Hannibal slashes the Ogre with their sword inflicting a damage of 20", barbarian.attack(barbarian, ogre));
     }
 }

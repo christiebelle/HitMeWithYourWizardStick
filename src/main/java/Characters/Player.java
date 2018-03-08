@@ -54,4 +54,9 @@ public abstract class Player {
     public void deductHealth(int damage) {
         this.health -= damage;
     }
+
+    public int calculateActualDamage() {
+        int actual = this.weapon.getDamage() * this.level;
+        return actual;
+    }
 }

@@ -1,4 +1,5 @@
 import Characters.*;
+import Enums.Weapons;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -43,5 +44,12 @@ public class TestPlayer {
     public void testDeductHealth() {
         knight.deductHealth(10);
         assertEquals(90, knight.getHealth());
+    }
+
+    @Test
+    public void testCalculateActualDamage() {
+        knight.setLevel(2);
+        knight.setWeapon(Weapons.AXE);
+        assertEquals(16, knight.calculateActualDamage());
     }
 }

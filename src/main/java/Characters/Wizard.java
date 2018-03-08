@@ -10,6 +10,8 @@ public class Wizard extends Player implements iAttack {
 
     @Override
     public String attack(Player player, Enemy enemy) {
-        return null;
+        int power = player.calculateActualDamage();
+        enemy.deductHealth(power);
+        return player.getName() + " " + player.getWeapon().getAttack() + " the " + enemy.getType() + " with their " + player.getWeapon().toString().toLowerCase() + " inflicting a damage of " + power;
     }
 }
