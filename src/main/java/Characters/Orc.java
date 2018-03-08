@@ -8,8 +8,15 @@ public class Orc extends Enemy {
 
     @Override
     public String attack(Player player, Enemy enemy) {
-        int power = enemy.calculateActualDamage();
-        player.deductHealth(power);
-        return enemy.getType() + " " + enemy.getWeapon().getAttack() + " " + player.getName() + " with their " + enemy.getWeapon().toString().toLowerCase() + " inflicting a damage of " + power;
+        if (player.getType() == "Knight") {
+            Knight knight = (Knight) player;
+            int power = enemy.calculateActualDamage() - knight.getArmour();
+            player.deductHealth(power);
+            return enemy.getType() + " " + enemy.getWeapon().getAttack() + " " + player.getName() + " with their " + enemy.getWeapon().toString().toLowerCase() + " inflicting a damage of " + power;
+        }else{
+            int power = enemy.calculateActualDamage();
+            player.deductHealth(power);
+            return enemy.getType() + " " + enemy.getWeapon().getAttack() + " " + player.getName() + " with their " + enemy.getWeapon().toString().toLowerCase() + " inflicting a damage of " + power;
+        }
     }
 }

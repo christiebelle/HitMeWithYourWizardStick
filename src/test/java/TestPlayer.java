@@ -14,15 +14,18 @@ public class TestPlayer {
     Warlock warlock;
     Wizard wizard;
 
+    Ogre ogre;
+
 
     @Before
     public void setUp() throws Exception {
-        knight = new Knight("Brave Sir Robin", "Knight", 100);
-        barbarian = new Barbarian("Hannibal", "Barbarian", 100);
+        knight = new Knight("Brave Sir Robin", "Knight", 100, 10);
+        barbarian = new Barbarian("Hannibal", "Barbarian", 100, 2);
         cleric = new Cleric("Eustace the Monk", "Cleric", 100);
         dwarf = new Dwarf("Sneezy", "Dwarf", 100);
         warlock = new Warlock("Adam", "Warlock", 100);
         wizard = new Wizard("Gandalf", "Wizard", 100);
+        ogre = new Ogre("Ogre", 100);
     }
 
     @Test
@@ -51,5 +54,12 @@ public class TestPlayer {
         knight.setLevel(2);
         knight.setWeapon(Weapons.AXE);
         assertEquals(16, knight.calculateActualDamage());
+    }
+
+    @Test
+    public void testAttack() {
+        barbarian.setLevel(2);
+        barbarian.setWeapon(Weapons.SWORD);
+        assertEquals("Hannibal slashes the Ogre with their sword inflicting a damage of 40", barbarian.attack(barbarian, ogre));
     }
 }

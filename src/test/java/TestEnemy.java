@@ -1,7 +1,4 @@
-import Characters.Knight;
-import Characters.Ogre;
-import Characters.Orc;
-import Characters.Troll;
+import Characters.*;
 import Enums.Weapons;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,6 +12,7 @@ public class TestEnemy {
     Troll troll;
 
     Knight knight;
+    Wizard wizard;
 
     @Before
     public void setUp() throws Exception {
@@ -48,10 +46,20 @@ public class TestEnemy {
 
     @Test
     public void testAttack() {
-        knight = new Knight("Brave Sir Robin", "Knight", 100);
+        wizard = new Wizard("Gandalf", "Wizard", 100);
         orc.setLevel(2);
         orc.setWeapon(Weapons.SWORD);
-        assertEquals("Orc slashes Brave Sir Robin with their sword inflicting a damage of 20", orc.attack(knight, orc));
+        assertEquals("Orc slashes Gandalf with their sword inflicting a damage of 20", orc.attack(wizard, orc));
     }
+
+    @Test
+    public void testAttackKnight() {
+        knight = new Knight("Brave Sir Robin", "Knight", 100, 10);
+        orc.setLevel(2);
+        orc.setWeapon(Weapons.SWORD);
+        assertEquals("Orc slashes Brave Sir Robin with their sword inflicting a damage of 10", orc.attack(knight, orc));
+    }
+
+
 }
 

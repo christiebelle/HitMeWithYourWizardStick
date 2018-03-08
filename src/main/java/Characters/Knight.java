@@ -4,8 +4,15 @@ import Interfaces.iAttack;
 
 public class Knight extends Player implements iAttack {
 
-    public Knight(String name, String type, int health) {
+    private int armour;
+
+    public Knight(String name, String type, int health, int armour) {
         super(name, type, health);
+        this.armour = armour;
+    }
+
+    public int getArmour() {
+        return armour;
     }
 
     @Override

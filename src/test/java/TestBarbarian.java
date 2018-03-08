@@ -13,7 +13,7 @@ public class TestBarbarian {
 
     @Before
     public void setUp() throws Exception {
-        barbarian = new Barbarian("Hannibal", "Barbarian", 100);
+        barbarian = new Barbarian("Hannibal", "Barbarian", 100, 2);
         ogre = new Ogre("Ogre", 100);
     }
 
@@ -21,6 +21,6 @@ public class TestBarbarian {
     public void testAttack() {
         barbarian.setLevel(2);
         barbarian.setWeapon(Weapons.SWORD);
-        assertEquals("Hannibal slashes the Ogre with their sword inflicting a damage of 20", barbarian.attack(barbarian, ogre));
+        assertEquals("Hannibal slashes the Ogre with their sword inflicting a damage of 40", barbarian.attack(barbarian, ogre));
     }
 }
