@@ -1,5 +1,6 @@
 package Characters;
 
+import Enums.Weapons;
 import Interfaces.iAttack;
 
 public class Barbarian extends Player implements iAttack {
@@ -10,6 +11,6 @@ public class Barbarian extends Player implements iAttack {
 
     @Override
     public String attack(Player player, Enemy enemy) {
-        return null;
+        return player.getName() + " " + player.getWeapon().getAttack() + " the " + enemy.getType() + " with their " + player.getWeapon().toString().toLowerCase() + " inflicting a damage of " + player.getWeapon().getDamage();
     }
 }

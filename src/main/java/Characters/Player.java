@@ -8,14 +8,14 @@ public abstract class Player {
     private String name;
     private String type;
     private int health;
-    private int attackBonus;
+    private int level;
     private Weapons weapon;
 
     public Player(String name, String type, int health) {
         this.name = name;
         this.type = type;
         this.health = health;
-        this.attackBonus = attackBonus;
+        this.level = level;
         this.weapon = weapon;
     }
 
@@ -31,8 +31,8 @@ public abstract class Player {
         return health;
     }
 
-    public int getAttackBonus() {
-        return attackBonus;
+    public int getLevel() {
+        return level;
     }
 
     public Weapons getWeapon() {
@@ -43,8 +43,8 @@ public abstract class Player {
         this.name = name;
     }
 
-    public void setAttackBonus(int attackBonus) {
-        this.attackBonus = attackBonus;
+    public void setLevel(int level) {
+        this.level = level;
     }
 
     public void setWeapon(Weapons weapon) {

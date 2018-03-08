@@ -7,13 +7,13 @@ public abstract class Enemy implements iAttack {
 
     private String type;
     private int health;
-    private int attackBonus;
+    private int level;
     private Weapons weapon;
 
     public Enemy(String type, int health) {
         this.type = type;
         this.health = health;
-        this.attackBonus = attackBonus;
+        this.level = level;
         this.weapon = weapon;
     }
 
@@ -25,16 +25,16 @@ public abstract class Enemy implements iAttack {
         return health;
     }
 
-    public int getAttackBonus() {
-        return attackBonus;
+    public int getLevel() {
+        return level;
     }
 
     public Weapons getWeapon() {
         return weapon;
     }
 
-    public void setAttackBonus(int attackBonus) {
-        this.attackBonus = attackBonus;
+    public void setLevel(int level) {
+        this.level = level;
     }
 
     public void setWeapon(Weapons weapon) {

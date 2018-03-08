@@ -2,7 +2,7 @@ package Characters;
 
 import Interfaces.iAttack;
 
-public class Dwarf extends Player{
+public class Dwarf extends Player  implements iAttack{
 
     public Dwarf(String name, String type, int health) {
         super(name, type, health);
