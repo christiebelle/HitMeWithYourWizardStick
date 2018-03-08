@@ -38,4 +38,10 @@ public class TestPlayer {
     public void testHasHealth() {
         assertEquals(100, wizard.getHealth());
     }
+
+    @Test
+    public void testDeductHealth() {
+        knight.deductHealth(10);
+        assertEquals(90, knight.getHealth());
+    }
 }

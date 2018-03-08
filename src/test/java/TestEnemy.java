@@ -28,5 +28,11 @@ public class TestEnemy {
     public void testHasHealth() {
         assertEquals(100, orc.getHealth());
     }
+
+    @Test
+    public void testDeductHealth() {
+        troll.deductHealth(10);
+        assertEquals(90, troll.getHealth());
+    }
 }
 

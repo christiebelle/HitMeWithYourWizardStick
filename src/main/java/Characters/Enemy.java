@@ -40,4 +40,8 @@ public abstract class Enemy implements iAttack {
     public void setWeapon(Weapons weapon) {
         this.weapon = weapon;
     }
+
+    public void deductHealth(int damage) {
+        this.health -= damage;
+    }
 }
